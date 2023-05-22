@@ -21,11 +21,11 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Blog - PHP Blog</title>
+    <title>Home - PHP Blog</title>
 </head>
 <body>
     <?php include '../layout/nav.php' ?>
-    <?php include './single.php' ?>
+    <?php include '../blog/single.php' ?>
     <?php include '../layout/footer.php' ?>
 
 </body>

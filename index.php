@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
     <!-- end -->
 
+
+    <!-- font-awesome Icon -->
+    <script src="https://kit.fontawesome.com/ad7f215142.js" crossorigin="anonymous"></script>
+    <!-- end  -->
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -29,6 +34,20 @@
             include './views/layout/nav.php'
             ?>
         </header>
+
+        <body>
+            
+        <?php include './views/blog/single.php' ?>
+
+
+        </body>
+
+        <footer>
+            <?php
+
+            include './views/layout/footer.php'
+            ?>
+        </footer>
     </section>
 </body>
 
