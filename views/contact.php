@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="en">
 
 <head>
@@ -22,34 +22,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <title>PHP BLOG</title>
+    <title>Home - PHP Blog</title>
 </head>
 
 <body>
-    <section>
-        <header>
-            <?php
+    <?php include './layout/nav.php' ?>
+    <?php include './blog/single.php' ?>
+    <?php include './layout/footer.php' ?>
 
-            include './views/layout/nav.php'
-            ?>
-        </header>
-
-        <body>
-            
-        <?php include './views/blog/single.php' ?>
-        <?php include './views/about/about.php' ?>
-
-
-        </body>
-
-        <footer>
-            <?php
-
-            include './views/layout/footer.php'
-            ?>
-        </footer>
-    </section>
 </body>
 
 </html>

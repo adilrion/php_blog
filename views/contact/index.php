@@ -1,7 +1,17 @@
-<!DOCTYPE html>
+<?php
+
+$name = "Bard";
+$bio = "I am a large language model, also known as a conversational AI or chatbot trained to be informative and comprehensive. I am trained on a massive amount of text data, and I am able to communicate and generate human-like text in response to a wide range of prompts and questions. For example, I can provide summaries of factual topics or create stories.";
+
+?>
+
+
+
+<!DOCTYPE php>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -23,10 +33,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Home - PHP Blog</title>
 </head>
+
 <body>
     <?php include '../layout/nav.php' ?>
-    <?php include '../blog/single.php' ?>
+
+
+
+    <?php include './contact.php' ?>
     <?php include '../layout/footer.php' ?>
 
 </body>
+
 </html>

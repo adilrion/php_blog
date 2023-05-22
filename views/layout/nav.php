@@ -3,7 +3,7 @@
 $navData = [
   [
     'label' => 'Home',
-    'href' => '/phpBlog/views/home',
+    'href' => '/phpBlog/views/home.php',
   ],
   [
     'label' => 'Blog',
@@ -24,7 +24,7 @@ $navData = [
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 py-3 mb-3">
   <div class="container-xl">
     <!-- Logo -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/phpBlog/">
       <img src="https://preview.webpixels.io/web/img/logos/clever-primary.svg" class="h-8" alt="...">
     </a>
     <!-- Navbar toggle -->
