@@ -31,17 +31,13 @@ $bio = "I am a large language model, also known as a conversational AI or chatbo
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Home - PHP Blog</title>
+    <title>Contact - PHP Blog</title>
 </head>
 
 <body>
     <?php include '../layout/nav.php' ?>
-
-
-
     <?php include './contact.php' ?>
     <?php include '../layout/footer.php' ?>
-
 </body>
 
 </html>

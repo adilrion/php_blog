@@ -39,6 +39,7 @@
             
         <?php include './views/blog/single.php' ?>
         <?php include './views/about/about.php' ?>
+        <?php include './views/contact/contact.php' ?>
 
 
         </body>

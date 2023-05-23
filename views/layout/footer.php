@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer class="bg-light text-center ">
+<footer class=" text-center ">
   <!-- Grid container -->
-  <div class="container p-4">
+  <div class="container p-4 bg-light">
 
     <!-- Section: Social media -->
     <section class="mb-4">
@@ -65,14 +65,14 @@
 
 
     <!-- Section: Text -->
-    <section class="mb-4">
+    <!-- <section class="mb-4">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
         distinctio earum repellat quaerat voluptatibus placeat nam,
         commodi optio pariatur est quia magnam eum harum corrupti dicta,
         aliquam sequi voluptate quas.
       </p>
-    </section>
+    </section> -->
     <!-- Section: Text -->
 
 
@@ -80,7 +80,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+  <div class="text-center p-3"  style="background-color: rgba(0, 0, 0, 0.2)">
     © 2023 Copyright:
     <a class="text-dark" href="https://adilrion.vercel.app/">Adil Mahmoud Rion</a>
   </div>

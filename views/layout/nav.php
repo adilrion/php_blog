@@ -24,8 +24,8 @@ $navData = [
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 py-3 mb-3">
   <div class="container-xl">
     <!-- Logo -->
-    <a class="navbar-brand" href="/phpBlog/">
-      <img src="https://preview.webpixels.io/web/img/logos/clever-primary.svg" class="h-8" alt="...">
+    <a class="navbar-brand fs-4 fw-bold" href="/phpBlog/">
+PHP BLOG
     </a>
     <!-- Navbar toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

@@ -28,7 +28,8 @@
 <body>
     <?php include './layout/nav.php' ?>
     <?php include './blog/single.php' ?>
-    <!-- <?php include './about/about.php' ?> -->
+    <?php include './about/about.php' ?>
+    <?php include './contact/contact.php' ?>
     <?php include './layout/footer.php' ?>
 
 </body>
