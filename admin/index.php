@@ -21,36 +21,25 @@
     <!-- end  -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./adminStyle.css">
 
-    <title>PHP BLOG</title>
+    <title>Admin - PHP BLOG</title>
 </head>
 
 <body>
-    <section>
-        <header>
-            <?php
 
-            include './pages/layout/nav.php'
-            ?>
-        </header>
+    <header>
+        <?php include './includes/header.php' ?>
 
-        <body>
-
-            <?php include './pages/blog/single.php' ?>
-            <?php include './pages/about/about.php' ?>
-            <?php include './pages/contact/contact.php' ?>
+    </header>
 
 
-        </body>
+    <?php
 
-        <footer>
-            <?php
+    include './includes/sidebar.php'
 
-            include './pages/layout/footer.php'
-            ?>
-        </footer>
-    </section>
+    ?>
+    <script src="./js.js"></script>
 </body>
 
 </html>

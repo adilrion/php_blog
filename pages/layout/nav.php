@@ -3,19 +3,19 @@
 $navData = [
   [
     'label' => 'Home',
-    'href' => '/phpBlog/views/home.php',
+    'href' => '/phpBlog/pages/home.php',
   ],
   [
     'label' => 'Blog',
-    'href' => '/phpBlog/views/blog',
+    'href' => '/phpBlog/pages/blog',
   ],
   [
     'label' => 'About',
-    'href' => '/phpBlog/views/about',
+    'href' => '/phpBlog/pages/about',
   ],
   [
     'label' => 'Contact',
-    'href' => '/phpBlog/views/contact',
+    'href' => '/phpBlog/pages/contact',
   ],
 ];
 
