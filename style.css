@@ -5,3 +5,12 @@ body{
 .form-control:ring{
     outline: none;
 }
+
+.social-btn{
+    outline: none;
+    border:none;
+}
+
+.btn {
+ border: none;
+}
