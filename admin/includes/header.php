@@ -21,7 +21,7 @@ $navData = [
 
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light  z-1 px-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light  z-1 px-5 nav-item">
     <!-- Logo -->
     <a class="navbar-brand fs-4 fw-bold" href="/phpBlog/">
       PHP BLOG
