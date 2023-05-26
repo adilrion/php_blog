@@ -44,38 +44,37 @@
             <div class="container">
                 <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden w-50 mx-auto">
                     <div class="card-body p-4 p-sm-5 ">
-                        <h5 class="card-title text-center mb-5 fw-light fs-5">Register</h5>
-                        <form>
-
+                        <h5 class="card-title text-center mb-5 fw-light  fs-2 fw-bold">Registration</h5>
+                        <form action="../controllers/AuthController.php" method="POST">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInputUsername"
-                                    placeholder="myusername" required autofocus>
+                                    placeholder="Type Username" name="username" required autofocus>
                                 <label for="floatingInputUsername">Username</label>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInputEmail"
-                                    placeholder="name@example.com">
+                                    placeholder="Type Your Email Address" name="email">
                                 <label for="floatingInputEmail">Email address</label>
                             </div>
 
                             <hr>
 
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword"
-                                    placeholder="Password">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                                    name="password">
                                 <label for="floatingPassword">Password</label>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input type="password" class="form-control" id="floatingPasswordConfirm"
-                                    placeholder="Confirm Password">
+                                    placeholder="Confirm Password" name="confirmPassword">
                                 <label for="floatingPasswordConfirm">Confirm Password</label>
                             </div>
 
                             <div class="d-grid mb-2">
-                                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase"
-                                    type="submit">Register</button>
+                                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit"
+                                    name="button">Register</button>
                             </div>
 
                             <a class="d-block text-center mt-2 small" href="./signIn.php">Have an account? Sign In</a>

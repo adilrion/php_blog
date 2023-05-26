@@ -41,11 +41,11 @@ PHP BLOG
       </div>
       <!-- Right navigation -->
       <div class="navbar-nav ms-lg-4">
-        <a class="nav-item nav-link" href="auth/signIn.php">Sign in</a>
+        <a class="nav-item nav-link" href="/phpBlog/auth/signIn.php">Sign in</a>
       </div>
       <!-- Action -->
       <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-        <a href="auth/register.php" class="btn btn-sm btn-primary w-full w-lg-auto">
+        <a href="/phpBlog/auth/register.php" class="btn btn-sm btn-primary w-full w-lg-auto">
           Register
         </a>
       </div>
