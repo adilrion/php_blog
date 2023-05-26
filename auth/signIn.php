@@ -23,7 +23,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./authStyle.css">
 
-    <title>Authentication - PHP BLOG</title>
+    <title>sign in - PHP BLOG</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         <header>
             <?php
 
-            include '../layout/nav.php'
+            include '../pages/layout/nav.php'
             ?>
         </header>
 
@@ -92,7 +92,7 @@
         <footer>
             <?php
 
-            include '../layout/footer.php'
+include '../pages/layout/footer.php'
             ?>
         </footer>
     </section>
