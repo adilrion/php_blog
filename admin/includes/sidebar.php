@@ -3,8 +3,14 @@ $menuItems = [
     [
         'icon' => 'fas fa-tachometer-alt fa-fw',
         'title' => 'Main dashboard',
-        'link' => 'pages/dashboard.php',
-        'current' => true
+        'link' => '/phpBlog/admin/pages/dashboard.php',
+        'current' => false
+    ],
+    [
+        'icon' => 'fas fa-tachometer-alt fa-fw',
+        'title' => 'Blog',
+        'link' => '/phpBlog/admin/pages/blog.php',
+        'current' => false
     ],
     [
         'icon' => 'fas fa-chart-area fa-fw',
@@ -32,30 +38,10 @@ $menuItems = [
         'link' => '#'
     ],
     [
-        'icon' => 'fas fa-globe fa-fw',
-        'title' => 'International',
-        'link' => '#'
-    ],
-    [
-        'icon' => 'fas fa-building fa-fw',
-        'title' => 'Partners',
-        'link' => '#'
-    ],
-    [
-        'icon' => 'fas fa-calendar fa-fw',
-        'title' => 'Calendar',
-        'link' => '#'
-    ],
-    [
         'icon' => 'fas fa-users fa-fw',
         'title' => 'Users',
         'link' => '#'
     ],
-    [
-        'icon' => 'fas fa-money-bill fa-fw',
-        'title' => 'Sales',
-        'link' => '#'
-    ]
 ];
 ?>
 

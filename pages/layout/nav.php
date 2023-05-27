@@ -44,6 +44,8 @@ $navData = [
             echo 'active';
           } ?>" href="<?php echo $navItem['href']; ?>"><?php echo $navItem['label']; ?></a>
         <?php } ?>
+
+        <a href="/phpBlog/admin/" class="nav-item nav-link">Admin</a>
       </div>
 
 

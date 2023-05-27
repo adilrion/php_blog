@@ -109,8 +109,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                                     <?php
 
                                     echo $isEmailNotAvailable ? '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-<strong>Email!</strong> Not Found<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>' : '';
+                                    <strong>Email!</strong> Not Found<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>' : '';
                                     ?>
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control" id="floatingPassword"
