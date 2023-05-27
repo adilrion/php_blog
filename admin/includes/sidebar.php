@@ -13,6 +13,12 @@ $menuItems = [
         'current' => false
     ],
     [
+        'icon' => 'fas fa-tachometer-alt fa-fw',
+        'title' => 'Post',
+        'link' => '/phpBlog/admin/pages/post.php',
+        'current' => false
+    ],
+    [
         'icon' => 'fas fa-chart-area fa-fw',
         'title' => 'Website traffic',
         'link' => '#'

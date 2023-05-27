@@ -48,7 +48,13 @@
             <div class="w-75">
                 <h1 class="text-center">Blog Upload</h1>
                 <hr class="pb-3">
-                <form action="" method="post" class="d-flex flex-column row-gap-3 ">
+                <?php
+
+                echo isset($_GET['massage']) ? '<div class="alert alert-success alert-dismissible fade show" role="alert">' . $_GET['massage'] . '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>' : '';
+                ?>
+                <form action="../controllers/blogUpload.php" method="post" enctype="multipart/form-data"
+                    class="d-flex flex-column row-gap-3 ">
 
 
                     <div>
@@ -61,11 +67,11 @@
                     </div>
                     <div class="">
                         <label for="thumbnail">Thumbnail<span class="text-danger">*</span></label>
-                        <input type="file" placeholder="Title" id="thumbnail" class="form-control" name="thumbnail">
+                        <input type="file" name="image" placeholder="Thumbnail" id="thumbnail" class="form-control">
                     </div>
                     <div class="">
                         <label for="blogContent">Content<span class="text-danger">*</span></label>
-                        <textarea name="content" rows="5" cols="80" id="blogContent" class="form-control" > </textarea>
+                        <textarea name="content" rows="5" cols="80" id="blogContent" class="form-control"> </textarea>
                     </div>
 
                     <script>
