@@ -13,3 +13,11 @@
   color: white !important;
   background-color: #3b5998;
 }
+
+.form-control:focus {
+  outline: none !important;
+  border: none;
+}
+.form-control{
+  border: none;
+}

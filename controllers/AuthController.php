@@ -1,33 +1,33 @@
 <?php
 
-$mySql = require __DIR__ . './database.php';
+$mySql = require __DIR__ . '/database.php';
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password_hash = '';
-
-if ($_POST['password'] === $_POST['confirmPassword']) {
-    $password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    // print_r($_POST);
+if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirmPassword'])) {
+    header("Location: ../auth/register.php?please-fill-in-all-the-required-fields");
+    exit;
 } else {
-    die("<br>password did't match");
+    if ($_POST['password'] !== $_POST['confirmPassword']) {
+        header("Location: ../auth/register.php?password-don't-match");
+        exit;
+    }
+
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 }
+
+
 
 $insertData = "INSERT INTO `auth`(`username`, `email`, `password`) VALUES ('$username','$email','$password_hash')";
 
 if ($mySql->query($insertData) === TRUE) {
-    echo "<br>Registration Successful";
-    header("Location: ../auth/signIn.php");
+    echo "Registration Successful";
+    header("Location: ../auth/signIn.php?registration-successful-please-sign-in");
     exit;
 } else {
-
-  /*   if ($mySql->errno === 1062) {
-        die("Email Already Taken");
-    } else { */
-        die("<br><br><br>Error: " . $mySql->error);
-    // }
+    die("Error: " . $mySql->error);
 }
 
-$mySql->close();
+// $mySql->close();
 
 ?>
