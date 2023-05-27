@@ -1,3 +1,45 @@
+<?php
+
+$isEmailNotAvailable = false;
+$passwordNotMatch = false;
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $email = $_POST['email'];
+
+
+    $mySql = require __DIR__ . "/../config/database.php";
+
+    $query = "SELECT * FROM auth WHERE email=?";
+    $stmt = $mySql->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $user = $stmt->get_result()->fetch_assoc();
+
+
+    if ($user) {
+        if (password_verify($_POST['password'], $user['password'])) {
+            echo ("Login Successful");
+            session_start();
+            $_SESSION = $user;
+
+            header("Location: ../index.php");
+            exit;
+
+        } else {
+            $passwordNotMatch = true;
+        }
+    } else {
+        $isEmailNotAvailable = true;
+    }
+
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +69,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./authStyle.css">
+    <link rel="stylesheet" href="../../style.css">
 
     <title>sign in - PHP BLOG</title>
 </head>
@@ -50,22 +93,36 @@
 
                                 <?php
 
-                                echo isset($_GET['registration-successful-please-sign-in']) ? '<p>Registration successful! please sign in</p>' : '';
+                                echo isset($_GET['registration-successful-please-sign-in']) ? '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Registration Successful!</strong> Please Sign In<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>' : '';
                                 ?>
 
                                 <h5 class="card-title text-center mb-5 fw-bold fs-1">Sign In</h5>
-                                <form action="../controllers/AuthController.php" method="POST">
+                                <form method="post">
+
                                     <div class="form-floating mb-3">
                                         <input type="email" class="form-control" id="floatingInput"
-                                            placeholder="name@example.com">
+                                            placeholder="name@example.com" name="email">
                                         <label for="floatingInput">Email address</label>
                                     </div>
+                                    <?php
+
+                                    echo $isEmailNotAvailable ? '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>Email!</strong> Not Found<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>' : '';
+                                    ?>
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control" id="floatingPassword"
-                                            placeholder="Password">
+                                            placeholder="Password" name="password">
                                         <label for="floatingPassword">Password</label>
                                     </div>
+                                    <?php
 
+                                    echo $passwordNotMatch ? '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>Password!</strong> does not match<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>' : '';
+                                    ?>
                                     <div class="form-check mb-3">
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="rememberPasswordCheck">

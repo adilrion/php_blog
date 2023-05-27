@@ -27,6 +27,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./authStyle.css">
+    <link rel="stylesheet" href="../../style.css">
 
     <title>Authentication - PHP BLOG</title>
 </head>

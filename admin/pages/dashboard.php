@@ -27,6 +27,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../adminStyle.css">
+    <link rel="stylesheet" href="../../style.css">
 
     <title>Admin - PHP BLOG</title>
 </head>

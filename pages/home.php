@@ -21,7 +21,7 @@
     <!-- end  -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Home - PHP Blog</title>
 </head>
 

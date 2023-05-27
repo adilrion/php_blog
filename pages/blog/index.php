@@ -20,7 +20,7 @@
     <!-- end  -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Blog - PHP Blog</title>
 </head>
 <body>
