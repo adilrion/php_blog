@@ -46,7 +46,7 @@
         </aside>
 
         <section>
-            <div class="">
+            <div class="pe-3">
                 <?php
                 include '../../config/database.php';
 
@@ -73,10 +73,13 @@
 
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="view">view</div>
-                                <div class="Edit">Edit</div>
-                                <div class="Delete">Delete</div>
+                            <div class="d-flex align-items-center gap-3 pe-3 ">
+                                <div class="view"><a href="#"><i class="fa fa-eye text-secondary" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="Edit"><a href="#"><i class="fa fa-pencil-square-o text-info"
+                                            aria-hidden="true"></i></a></div>
+                                <div class="Delete "><a href="#"><i class="fa fa-trash text-decoration-none text-danger"
+                                            aria-hidden="true"></i></a></div>
                             </div>
                         </div>
                         <?php
