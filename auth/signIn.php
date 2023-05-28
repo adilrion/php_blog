@@ -18,9 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     if ($user) {
         if (password_verify($_POST['password'], $user['password'])) {
-            echo ("Login Successful");
+            // echo ("Login Successful");
             session_start();
-            $_SESSION = $user;
+            $_SESSION['id'] = $user['id']; // Store the user ID
+            $_SESSION['username'] = $user['username']; // Store the username
+            $_SESSION['email'] = $user['email']; // Store the username
+            $_SESSION['role'] = $user['role']; // Store the username
 
             header("Location: ../index.php");
             exit;

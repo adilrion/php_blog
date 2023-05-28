@@ -1,3 +1,5 @@
+ 
+
 <?php
 $menuItems = [
     [
@@ -17,6 +19,12 @@ $menuItems = [
         'title' => 'Post',
         'link' => '/phpBlog/admin/pages/post.php',
         'current' => false
+    ],
+    [
+        'icon' => 'fas fa-users fa-fw',
+        'title' => 'User',
+        'link' => '/phpBlog/admin/pages/users.php'
+ 
     ],
     [
         'icon' => 'fas fa-chart-area fa-fw',
@@ -42,13 +50,9 @@ $menuItems = [
         'icon' => 'fas fa-chart-bar fa-fw',
         'title' => 'Orders',
         'link' => '#'
-    ],
-    [
-        'icon' => 'fas fa-users fa-fw',
-        'title' => 'Users',
-        'link' => '#'
-    ],
+    ]
 ];
+
 ?>
 
 <aside class="sidebar z-0 bg-light">

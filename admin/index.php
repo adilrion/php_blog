@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+
+
+// Check if the user is logged in and has the admin role
+if ($_SESSION['role'] !== 'admin') {
+    header("Location: ../auth/signIn.php");
+    exit();
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +60,7 @@
         </aside>
 
         <section class="admin-body">
-            <h1>this</h1>
+            <h1>This Page Under Construction</h1>
         </section>
     </section>
 
