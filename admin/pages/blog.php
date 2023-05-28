@@ -74,10 +74,54 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-3 pe-3 ">
-                                <div class="view"><a href="#"><i class="fa fa-eye text-secondary" aria-hidden="true"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                                        class="fa fa-eye text-secondary" aria-hidden="true"></i></a>
+
+                                <!-- Modal -->
+                                <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="modal-title fs-5" id="staticBackdropLabel">
+                                                    <h4 class="title">
+                                                        <?= $row['title'] ?>
+                                                    </h4>
+                                                    <p class="fw-lighter mb-0 font-monospace">
+                                                        <?= $row['author'] ?>
+                                                    </p>
+                                                </div>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <img class="w-100 h-100 overflow-hidden"
+                                                    src="../controllers/upload/<?= $row['image'] ?>" alt="" srcset="">
+                                                <div>
+                                                    <?= $row['content'] ?>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="Edit"><a href="#"><i class="fa fa-pencil-square-o text-info"
-                                            aria-hidden="true"></i></a></div>
+                                            aria-hidden="true"></i></a>
+
+
+
+
+
+                                </div>
+
+
+
                                 <div class="Delete "><a href="#"><i class="fa fa-trash text-decoration-none text-danger"
                                             aria-hidden="true"></i></a></div>
                             </div>
