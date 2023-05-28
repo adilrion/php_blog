@@ -2,7 +2,6 @@
 include '../../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    print_r($_FILES['image']);
     $imageName = $_FILES['image']['name'];
     $imageType = $_FILES['image']['type'];
     $imageTmpName = $_FILES['image']['tmp_name'];
