@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,6 +52,10 @@
                 // Use the $blogId variable as needed, such as for database queries or other operations
                 $sql = "SELECT * FROM `blogs` WHERE id = '$blogId'";
                 $result = $conn->query($sql);
+                $baseUrl = 'http://localhost/php-blog/admin/controllers/upload/';
+
+                $sqlForRecentBlog = "SELECT * FROM `blogs`";
+                $resultRecentBlog = $conn->query($sqlForRecentBlog);
 
                 if ($result->num_rows > 0) {
                     while ($blog = $result->fetch_assoc()) {
@@ -64,7 +66,8 @@
                             <p class="font-monospace">' . $blog['author'] . '</p>
                         </div>
                         <hr>
-                        <img src="../../admin/controllers/upload/' . $blog['image'] . ' "class="object-fit-cover " style="max-height: 400px; width: 100%"/>
+                      
+                        <img src="' . $baseUrl . $blog['image'] . '" class="object-fit-cover" style="max-height: 400px; width: 100%"/>
         
                         <div>
                         ' . $blog['content'] . '
@@ -86,19 +89,44 @@
                 // No blog ID provided
                 echo 'Invalid blog ID.';
             }
+
+
             ?>
 
             <div class="col-4">
                 <h6 class="font-monospace">Recent Blog</h6>
                 <hr>
-                <div>
-                    <h3>Lorem ipsum dolor sit amet consectetur </h3>
+
+                <?php
+
+                $sqlForRecentBlog = "SELECT * FROM `blogs`";
+                $resultRecentBlog = $conn->query($sqlForRecentBlog);
+                $baseUrlBlog = 'http://localhost/php-blog/pages/blog/read-blog.php?id=';
 
 
-                    <a href="?id=">Read More</a>
+                if ($resultRecentBlog->num_rows > 0) {
+                    // output data of each row
+                    while ($blog = $resultRecentBlog->fetch_assoc()) {
+                        echo '
+                        <div>
+                            <h3 class="text-dark">' . $blog['title'] . '</h3>
+        
+        
+                            <a href="' . $baseUrlBlog . $blog['id'] . '" class="fs-6">Read more</a>
+        
+                        </div>
+                        <hr>
+                      ';
+                    }
+                } else {
+                    echo "0 results";
+                }
 
-                </div>
-                <hr>
+
+                ?>
+
+
+              
             </div>
 
 

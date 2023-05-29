@@ -35,11 +35,17 @@
     <div class="blog-body">
       <?php
 
-      include  'config/database.php';
+      $conn = new mysqli("localhost", "root", "", "phpblog");
+
+      if ($conn->connect_error) {
+        die("connection failed: " . $conn->connect_error);
+      }
+
 
       $sql = "SELECT * FROM `blogs`";
       $result = $conn->query($sql);
-
+      $baseUrl = 'http://localhost/php-blog/admin/controllers/upload/';
+      $baseUrlBlog = 'http://localhost/php-blog/pages/blog/read-blog.php?id=';
 
       if ($result->num_rows > 0) {
         // output data of each row
@@ -48,13 +54,13 @@
        
           <div class=" shadow-sm rounded overflow-hidden p-0 w-100" >
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="admin/controllers/upload/' . $blog['image'] . ' "class="object-fit-cover" style="height: 300px; width: 100%"/>
+            <img src="' . $baseUrl . $blog['image'] . '" class="object-fit-cover" style="height: 300px; width: 100%"/>
             </div>
     
             <div class="p-3">
               <h5 class="card-title">' . $blog['title'] . '</h5>
               <p class="card-text mb-1">' . $blog['author'] . '</p>
-              <a href="pages/blog/read-blog.php?id=' . $blog['id'] . '" class="">Read more</a>
+              <a href="'.$baseUrlBlog . $blog['id'] . '" class="">Read more</a>
             </div>
           </div>
      
