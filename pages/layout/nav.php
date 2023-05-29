@@ -5,19 +5,19 @@ session_start();
 $navData = [
   [
     'label' => 'Home',
-    'href' => '/phpBlog/pages/home.php',
+    'href' => '/php-blog/pages/home.php',
   ],
   [
     'label' => 'Blog',
-    'href' => '/phpBlog/pages/blog',
+    'href' => '/php-blog/pages/blog',
   ],
   [
     'label' => 'About',
-    'href' => '/phpBlog/pages/about',
+    'href' => '/php-blog/pages/about',
   ],
   [
     'label' => 'Contact',
-    'href' => '/phpBlog/pages/contact',
+    'href' => '/php-blog/pages/contact',
   ],
 ];
 
@@ -26,7 +26,7 @@ $navData = [
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 py-3 mb-3">
   <div class="container-xl">
     <!-- Logo -->
-    <a class="navbar-brand fs-4 fw-bold" href="/phpBlog/">
+    <a class="navbar-brand fs-4 fw-bold" href="/php-blog/">
       PHP BLOG
     </a>
     <!-- Navbar toggle -->
@@ -47,7 +47,7 @@ $navData = [
 
 
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-          <a href="/phpBlog/admin/" class="nav-item nav-link">Admin</a>
+          <a href="/php-blog/admin/" class="nav-item nav-link">Admin</a>
         <?php endif; ?>
 
 
@@ -60,18 +60,18 @@ $navData = [
       echo isset($_SESSION['username']) ? '<div class="navbar-nav ms-lg-4 me-3">' . $_SESSION['username'] . '</div>
 
       <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-      <a href="/phpBlog/controllers/logout.php" class="btn btn-sm btn-primary w-full w-lg-auto">
+      <a href="/php-blog/controllers/logout.php" class="btn btn-sm btn-primary w-full w-lg-auto">
         Logout
       </a>
       </div>
       ' : '
 <!-- Right navigation -->
     <div class="navbar-nav ms-lg-4">
-      <a class="nav-item nav-link" href="/phpBlog/auth/signIn.php">Sign in</a>
+      <a class="nav-item nav-link" href="/php-blog/auth/signIn.php">Sign in</a>
     </div>
 <!-- Action -->
     <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-      <a href="/phpBlog/auth/register.php" class="btn btn-sm btn-primary w-full w-lg-auto">
+      <a href="/php-blog/auth/register.php" class="btn btn-sm btn-primary w-full w-lg-auto">
         Register
       </a>
     </div>

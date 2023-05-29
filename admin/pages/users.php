@@ -1,6 +1,12 @@
 <?php
 
 session_start();
+
+if ($_SESSION['role'] !== 'admin') {
+    header("Location: ../../auth/signIn.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +77,7 @@ session_start();
                             $userId = $_POST['user-id'];
 
                             // Update the user's role to "admin" in the database
-                            $updateQuery = "UPDATE `auth` SET `role` = 'admin' WHERE `id` = '$userId'";
+                            $updateQuery = "UPDATE `users` SET `role` = 'admin' WHERE `id` = '$userId'";
                             if ($conn->query($updateQuery) === TRUE) {
                                 // Role update successful, display success message or perform any other actions
                                 echo '<div class="alert alert-success">User role updated to admin</div>';
@@ -85,7 +91,7 @@ session_start();
                             $userId = $_POST['user-id'];
 
                             // Delete the user from the database
-                            $deleteQuery = "DELETE FROM `auth` WHERE `id` = '$userId'";
+                            $deleteQuery = "DELETE FROM `users` WHERE `id` = '$userId'";
                             if ($conn->query($deleteQuery) === TRUE) {
                                 if ($_SESSION['id'] == $userId) {
                                     session_unset(); // Clear all session variables
@@ -104,12 +110,12 @@ session_start();
                             $userId = $_POST['user-id'];
 
                             // Update the user's role to null in the database
-                            $updateQuery = "UPDATE `auth` SET `role` = NULL WHERE `id` = '$userId'";
+                            $updateQuery = "UPDATE `users` SET `role` = NULL WHERE `id` = '$userId'";
                             if ($conn->query($updateQuery) === TRUE) {
                                 if ($_SESSION['id'] == $userId) {
                                     session_unset(); // Clear all session variables
                                     session_destroy();
-                                    // header("Location: /phpBlog/index.php"); // Destroy the session
+                                    // header("Location: /php-blog/index.php"); // Destroy the session
                                 }
 
                                 // Role removal successful, display success message or perform any other actions
@@ -121,7 +127,7 @@ session_start();
                         }
 
 
-                        $queryData = "SELECT * FROM `auth`";
+                        $queryData = "SELECT * FROM `users`";
                         $result = $conn->query($queryData);
 
                         if ($result->num_rows > 0) {

@@ -16,7 +16,7 @@ if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['passwor
     $email = $_POST['email'];
     $password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $insertData = "INSERT INTO `auth`(`username`, `email`, `password`) VALUES ('$username','$email','$password_hash')";
+    $insertData = "INSERT INTO `users`(`username`, `email`, `password`) VALUES ('$username','$email','$password_hash')";
 
     if ($mySql->query($insertData) === TRUE) {
         echo "Registration Successful";

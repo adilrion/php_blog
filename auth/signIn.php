@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     $mySql = require __DIR__ . "/../config/database.php";
 
-    $query = "SELECT * FROM auth WHERE email=?";
+    $query = "SELECT * FROM users WHERE email=?";
     $stmt = $mySql->prepare($query);
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -101,7 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                                 </div>' : '';
                                 ?>
 
-                                <h5 class="card-title text-center mb-5 fw-bold fs-1">Sign In</h5>
+                                <h5 class="card-title text-center mb-5 fw-bold fs-1">Sign in</h5>
+                                <hr>
                                 <form method="post">
 
                                     <div class="form-floating mb-3">
