@@ -35,7 +35,9 @@
     <div class="blog-body">
       <?php
 
-      $conn = new mysqli("localhost", "root", "", "phpblog");
+
+      $conn = require __DIR__ . '../../../config/database.php';
+
 
       if ($conn->connect_error) {
         die("connection failed: " . $conn->connect_error);
@@ -60,7 +62,7 @@
             <div class="p-3">
               <h5 class="card-title">' . $blog['title'] . '</h5>
               <p class="card-text mb-1">' . $blog['author'] . '</p>
-              <a href="'.$baseUrlBlog . $blog['id'] . '" class="">Read more</a>
+              <a href="' . $baseUrlBlog . $blog['id'] . '" class="">Read more</a>
             </div>
           </div>
      

@@ -39,7 +39,8 @@
     <?php include '../layout/nav.php' ?>
     <?php
 
-    include './single.php';
+include __DIR__ . '/single.php';
+
 
 
 
