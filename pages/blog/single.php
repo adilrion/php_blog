@@ -1,77 +1,91 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-$blogData = [
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
-    'title' => 'Card title 1',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 1.'
-  ],
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/222.webp',
-    'title' => 'Card title 2',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 2.'
-  ],
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/223.webp',
-    'title' => 'Card title 3',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 3.'
-  ],
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/234.webp',
-    'title' => 'Card title 4',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 4.'
-  ],
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/236.webp',
-    'title' => 'Card title 5',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 5.'
-  ],
-  [
-    'image' => 'https://mdbootstrap.com/img/new/standard/nature/237.webp',
-    'title' => 'Card title 6',
-    'content' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content 6.'
-  ],
-];
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 
-?>
 
-<div class="container">
-    <div class="row">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,400;1,500;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- end -->
+
+
+  <!-- font-awesome Icon -->
+  <script src="https://kit.fontawesome.com/ad7f215142.js" crossorigin="anonymous"></script>
+  <!-- end  -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../style.css">
+  <title>Blog - PHP Blog</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="blog-body">
       <?php
-      foreach ($blogData as $blog) {
-        echo '
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="' . $blog['image'] . '" class="img-fluid" />
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-              </a>
-            </div>
 
-            <div class="card-body">
+      include  'config/database.php';
+
+      $sql = "SELECT * FROM `blogs`";
+      $result = $conn->query($sql);
+
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while ($blog = $result->fetch_assoc()) {
+          echo '
+       
+          <div class=" shadow-sm rounded overflow-hidden p-0 w-100" >
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="admin/controllers/upload/' . $blog['image'] . ' "class="object-fit-cover" style="height: 300px; width: 100%"/>
+            </div>
+    
+            <div class="p-3">
               <h5 class="card-title">' . $blog['title'] . '</h5>
-              <p class="card-text">' . $blog['content'] . '</p>
+              <p class="card-text mb-1">' . $blog['author'] . '</p>
+              <a href="pages/blog/read-blog.php?id=' . $blog['id'] . '" class="">Read more</a>
             </div>
           </div>
-        </div>
+     
         ';
+        }
+
+      } else {
+        echo "0 results";
       }
+
+      $conn->close();
+
       ?>
     </div>
-    <nav aria-label="...">
-  <ul class="pagination pagination-circle">
-    <li class="page-item">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2 <span class="visually-hidden">(current)</span></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+    <nav class="mt-3">
+      <ul class="pagination pagination-circle">
+        <li class="page-item">
+          <a class=" page-link">Previous</a>
+
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2 <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
   </div>
+</body>
+
+</html>

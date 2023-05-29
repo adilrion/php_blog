@@ -1,16 +1,22 @@
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
 }
 
-.form-control:ring{
+.form-control:ring {
     outline: none;
 }
 
-.social-btn{
+.social-btn {
     outline: none;
-    border:none;
+    border: none;
 }
 
 .btn {
- border: none;
+    border: none;
+}
+
+.blog-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }

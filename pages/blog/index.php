@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +30,16 @@
 </head>
 <body>
     <?php include '../layout/nav.php' ?>
-    <?php include './single.php' ?>
+    <?php 
+    
+    include './single.php';
+
+    
+    
+    
+    
+    
+    ?>
     <?php include '../layout/footer.php' ?>
 
 </body>

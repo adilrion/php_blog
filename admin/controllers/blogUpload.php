@@ -27,10 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $em = 'blog insert successful';
             header("Location: ../pages/post.php?massage=$em");
             exit;
-        } else {
-            die($conn->error);
-            echo "there was an wroind";
-
         }
     }
 }
