@@ -61,10 +61,7 @@ if ($_SESSION['role'] !== 'admin') {
 
         <section class="admin-body">
          
-            <?php 
-            include './pages/dashboard.php';
-            
-            ?>
+            <h1>this page is under construction</h1>
         </section>
     </section>
 
