@@ -27,7 +27,6 @@
         <h4>24x7 Support</h4>
         <address>
           <p class="mb-0">Industry's standard dummy text.</p>
-          <!-- <p class="text-muted">1234 567 890</p> -->
         </address>
 
       </div>
@@ -51,13 +50,11 @@
         <div class="form-group">
           <label for="name2">Name</label>
           <input class="form-control" id="name2" name="name" type="text" placeholder="Name">
-          <!--  <div class="error" id="err-name" style="display: none;">Please enter name</div> -->
         </div> <!-- /Form-name -->
 
         <div class="form-group mt-3">
           <label for="email2">Email</label>
           <input class="form-control" id="email2" name="email" type="text" placeholder="E-mail">
-          <!-- <div class="error" id="err-emailvld" style="display: none;">E-mail is not a valid format</div>  -->
         </div> <!-- /Form-email -->
 
         <div class="form-group mt-3">
@@ -69,10 +66,7 @@
 
         <div class="row mt-2">
           <div class="col-xs-12">
-            <!--  <div id="ajaxsuccess" class="text-success">E-mail was successfully sent.</div>
-                <div class="error" id="err-form" style="display: none;">There was a problem validating the form please check!</div>
-                <div class="error" id="err-timedout">The connection to the server timed out!</div> -->
-            <!-- <div class="error" id="err-state"></div> -->
+         
             <button type="submit" class="btn btn-primary btn-shadow btn-rounded " id="send">Submit</button>
           </div> <!-- /col -->
         </div> <!-- /row -->

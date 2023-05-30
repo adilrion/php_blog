@@ -49,9 +49,10 @@
 
             if (isset($_GET['id'])) {
                 $blogId = $_GET['id'];
-                // Use the $blogId variable as needed, such as for database queries or other operations
                 $sql = "SELECT * FROM `blogs` WHERE id = '$blogId'";
                 $result = $conn->query($sql);
+
+                // baseUrl creating for routing problem
                 $baseUrl = 'http://localhost/php-blog/admin/controllers/upload/';
 
                 $sqlForRecentBlog = "SELECT * FROM `blogs`";

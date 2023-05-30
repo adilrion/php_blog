@@ -39,7 +39,7 @@
     <?php include '../layout/nav.php' ?>
     <?php
 
-include __DIR__ . '/single.php';
+    include __DIR__ . '/single.php';
 
 
 

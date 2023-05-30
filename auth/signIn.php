@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if (password_verify($_POST['password'], $user['password'])) {
             // echo ("Login Successful");
             session_start();
-            $_SESSION['id'] = $user['id']; // Store the user ID
-            $_SESSION['username'] = $user['username']; // Store the username
-            $_SESSION['email'] = $user['email']; // Store the username
-            $_SESSION['role'] = $user['role']; // Store the username
+            $_SESSION['id'] = $user['id']; 
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['role'] = $user['role']; 
 
             header("Location: ../index.php");
             exit;

@@ -3,8 +3,6 @@
 
 
 
-
-    <!-- Fact 3 - Bootstrap Brain Component -->
     <section class="py-5 py-xl-8">
 
         <div class="container">
@@ -59,7 +57,7 @@
 
             <div class="row mt-5">
                 <div class="col-md-5">
-                    <h1>About Me</h1>
+                    <h1>About us</h1>
                     <p>My name is and I am a large language model. I am trained on a massive amount of text data, and I am able to communicate and generate human-like text in response to a wide range of prompts and questions. For example, I can provide summaries of factual topics or create stories.</p>
                     <p>I am still under development, but I am learning new things every day. I am excited to see what the future holds for me, and I hope to be able to help people in many different ways.</p>
                 </div>

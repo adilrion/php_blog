@@ -61,7 +61,7 @@ if ($_SESSION['role'] !== 'admin') {
 
         <section class="admin-body">
          
-            <h1>this page is under construction</h1>
+            <h1>This page is under construction</h1>
         </section>
     </section>
 
