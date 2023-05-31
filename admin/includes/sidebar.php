@@ -3,25 +3,25 @@ $menuItems = [
     [
         'icon' => 'fas fa-tachometer-alt fa-fw',
         'title' => 'Main dashboard',
-        'link' => '/php-blog/admin/pages/dashboard.php',
+        'link' => '/admin/pages/dashboard.php',
         'current' => false
     ],
     [
         'icon' => 'fas fa-tachometer-alt fa-fw',
         'title' => 'Blog',
-        'link' => '/php-blog/admin/pages/blog.php',
+        'link' => '/admin/pages/blog.php',
         'current' => false
     ],
     [
         'icon' => 'fas fa-tachometer-alt fa-fw',
         'title' => 'Post',
-        'link' => '/php-blog/admin/pages/post.php',
+        'link' => '/admin/pages/post.php',
         'current' => false
     ],
     [
         'icon' => 'fas fa-users fa-fw',
         'title' => 'User',
-        'link' => '/php-blog/admin/pages/users.php'
+        'link' => '/admin/pages/users.php'
 
     ],
     [

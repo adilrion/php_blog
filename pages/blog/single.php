@@ -35,8 +35,8 @@
     <div class="blog-body">
       <?php
       $conn = require __DIR__ . '../../../config/database.php';
-      $baseUrl = 'http://localhost/php-blog/admin/controllers/upload/';
-      $baseUrlBlog = 'http://localhost/php-blog/pages/blog/read-blog.php?id=';
+      $baseUrl = 'http://localhost/admin/controllers/upload/';
+      $baseUrlBlog = 'http://localhost/pages/blog/read-blog.php?id=';
 
 
 
@@ -65,7 +65,7 @@
     
             <div class="p-3">
               <h5 class="card-title">' . $blog['title'] . '</h5>
-              <p class="card-text mb-1">' . $blog['author'] . '</p>
+              <p class="card-text mb-1 font-monospace">' . $blog['author'] . '</p>
               <a href="' . $baseUrlBlog . $blog['id'] . '" class="">Read more</a>
             </div>
           </div>';
@@ -111,6 +111,7 @@
 
 
     ?>
+
   </div>
 </body>
 

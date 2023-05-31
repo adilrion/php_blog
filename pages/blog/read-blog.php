@@ -53,7 +53,7 @@
                 $result = $conn->query($sql);
 
                 // baseUrl creating for routing problem
-                $baseUrl = 'http://localhost/php-blog/admin/controllers/upload/';
+                $baseUrl = 'http://localhost/admin/controllers/upload/';
 
                 $sqlForRecentBlog = "SELECT * FROM `blogs`";
                 $resultRecentBlog = $conn->query($sqlForRecentBlog);
@@ -102,7 +102,7 @@
 
                 $sqlForRecentBlog = "SELECT * FROM `blogs`";
                 $resultRecentBlog = $conn->query($sqlForRecentBlog);
-                $baseUrlBlog = 'http://localhost/php-blog/pages/blog/read-blog.php?id=';
+                $baseUrlBlog = 'http://localhost/pages/blog/read-blog.php?id=';
 
 
                 if ($resultRecentBlog->num_rows > 0) {
@@ -127,7 +127,7 @@
                 ?>
 
 
-              
+
             </div>
 
 

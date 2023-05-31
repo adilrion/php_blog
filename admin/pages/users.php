@@ -115,7 +115,7 @@ if ($_SESSION['role'] !== 'admin') {
                                 if ($_SESSION['id'] == $userId) {
                                     session_unset(); // Clear all session variables
                                     session_destroy();
-                                    // header("Location: /php-blog/index.php"); // Destroy the session
+                                    // header("Location: /index.php"); // Destroy the session
                                 }
 
                                 // Role removal successful, display success message or perform any other actions
