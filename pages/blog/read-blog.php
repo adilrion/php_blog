@@ -100,7 +100,8 @@
 
                 <?php
 
-                $sqlForRecentBlog = "SELECT * FROM `blogs`";
+                $sqlForRecentBlog = "SELECT * FROM `blogs` ORDER BY `time` DESC LIMIT 10";
+
                 $resultRecentBlog = $conn->query($sqlForRecentBlog);
                 $baseUrlBlog = 'http://localhost/pages/blog/read-blog.php?id=';
 
@@ -109,17 +110,20 @@
                     // output data of each row
                     while ($blog = $resultRecentBlog->fetch_assoc()) {
                         echo '
-                        <div>
-                            <h3 class="text-dark">' . $blog['title'] . '</h3>
-        
-        
-                            <a href="' . $baseUrlBlog . $blog['id'] . '" class="fs-6">Read more</a>
-        
+                        <div class="d-flex mb-2 p-2 shadow-sm align-items-center gap-2 text-dark text-decoration-none border-box" >
+                            <img src="' . $baseUrl . $blog['image'] . '" class="object-fit-cover rounded" style="max-height: 50px; width: 50px"/>
+                            <div>
+                                <h5 class="text-dark mb-0">' . $blog['title'] . '</h5>
+                                <a href="' . $baseUrlBlog . $blog['id'] . '" style="font-size: 15px">Read more</a>
+                            </div>
                         </div>
-                        <hr>
-                      ';
+                      
+                    ';
+
+
                     }
                 } else {
+
                     echo "0 results";
                 }
 
@@ -132,7 +136,7 @@
 
 
         </section>
-
+        <a href="dss" class="text-dark text-decoration-none">sss</a>
     </div>
 
     <?php include '../layout/footer.php' ?>

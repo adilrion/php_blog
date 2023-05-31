@@ -66,7 +66,7 @@
             <div class="p-3">
               <h5 class="card-title">' . $blog['title'] . '</h5>
               <p class="card-text mb-1 font-monospace">' . $blog['author'] . '</p>
-              <a href="' . $baseUrlBlog . $blog['id'] . '" class="">Read more</a>
+              <a href="' . $baseUrlBlog . $blog['id'] . '" style="font-size: 15px">Read more</a>
             </div>
           </div>';
         }
