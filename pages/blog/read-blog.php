@@ -61,7 +61,7 @@
                 if ($result->num_rows > 0) {
                     while ($blog = $result->fetch_assoc()) {
                         echo '
-                        <div class="col-8">
+                        <div class="col col-lg-8">
                         <div class="header">
                             <h1 class="text-dark">' . $blog['title'] . '</h1>
                             <p class="font-monospace">' . $blog['author'] . '</p>
@@ -94,7 +94,7 @@
 
             ?>
 
-            <div class="col-4">
+            <div class="col col-lg-4">
                 <h6 class="font-monospace">Recent Blog</h6>
                 <hr>
 
@@ -136,7 +136,6 @@
 
 
         </section>
-        <a href="dss" class="text-dark text-decoration-none">sss</a>
     </div>
 
     <?php include '../layout/footer.php' ?>
